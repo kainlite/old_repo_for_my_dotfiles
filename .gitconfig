@@ -38,11 +38,12 @@
   #   la = all commits, all reachable refs
   head = !git l -1
   h = !git head
-  hp = "!. ~/.githelpers && show_git_head"
+  hp = "!zsh -c '. ~/.githelpers && show_git_head'"
   r = !git l -30
   ra = !git r --all
-  l = "!. ~/.githelpers && pretty_git_log"
+  l = "!zsh -c '. ~/.githelpers && pretty_git_log'"
   la = !git l --all
+  lg = !git log --pretty=format:'%C(yellow)%h%Cred%d%Creset - %C(bold blue)%an %Creset: %s %Cgreen(%cr)'
 
 [merge]
   tool = vimdiff

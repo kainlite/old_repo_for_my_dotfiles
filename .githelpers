@@ -19,7 +19,12 @@ AUTHOR="%C(bold blue)<%an>%Creset"
 REFS="%C(red)%d%Creset"
 SUBJECT="%s"
 
-FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+colsep=$(echo '\x7f')
+# i.e. ^_ (ASCII Unit Separator)
+# colsep can be any single char that will never appear in the
+# commit subject or any other field.
+
+FORMAT="$HASH$colsep$RELATIVE_TIME$colsep$AUTHOR$colsep$REFS $SUBJECT"
 
 show_git_head() {
     pretty_git_log -1
