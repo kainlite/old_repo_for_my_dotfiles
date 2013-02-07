@@ -1,8 +1,11 @@
 # Set custom prompt
-setopt PROMPT_SUBST
-autoload -U promptinit
-promptinit
-prompt grb
+ZSH_THEME=gentoo
+ZSH=$HOME/.oh-my-zsh
+
+#setopt PROMPT_SUBST
+#autoload -U promptinit
+#promptinit
+#prompt grb
 
 # Initialize completion
 autoload -U compinit
@@ -100,6 +103,12 @@ function up()
 }
 
 # Initialize RVM
+export PATH=/home/kainlite/.rvm/gems/ruby-1.9.3-p362@rails32/bin:/home/kainlite/.rvm/gems/ruby-1.9.3-p362@global/bin:/home/kainlite/.rvm/rubies/ruby-1.9.3-p362/bin:/home/kainlite/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/kainlite/.rvm/bin
+
 PATH=$PATH:$HOME/.rvm/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+source $ZSH/oh-my-zsh.sh
