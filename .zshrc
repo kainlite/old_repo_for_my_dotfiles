@@ -111,4 +111,6 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+plugins=(git ruby rails3 bundler coffe gem git-extras git-flow github rvm screen)
+
 source $ZSH/oh-my-zsh.sh
