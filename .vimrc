@@ -22,6 +22,7 @@ set incsearch
 set hlsearch
 set pastetoggle=<C-p> 
 nnoremap <C-n> :set number!<CR>
+nnoremap <C-W> :w<CR>
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
