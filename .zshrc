@@ -103,9 +103,9 @@ function up()
 }
 
 # Initialize RVM
-export PATH=/home/kainlite/.rvm/gems/ruby-1.9.3-p362@rails32/bin:/home/kainlite/.rvm/gems/ruby-1.9.3-p362@global/bin:/home/kainlite/.rvm/rubies/ruby-1.9.3-p362/bin:/home/kainlite/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/kainlite/.rvm/bin
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/kainlite/.rvm/bin
 
-PATH=$PATH:$HOME/.rvm/bin
+#PATH=$PATH:$HOME/.rvm/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 

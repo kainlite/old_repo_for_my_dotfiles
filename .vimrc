@@ -20,6 +20,8 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+set pastetoggle=<C-p> 
+nnoremap <C-n> :set number!<CR>
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
@@ -137,6 +139,14 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ARROW KEYS ARE UNACCEPTABLE
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
