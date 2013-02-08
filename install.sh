@@ -30,6 +30,8 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/.$file ~/.$file
 done
+# extra symbolic link for gitconfig
+ln -s $dir/.gitconfig ~/.gitrc
 
 function install_zsh {
 # Test to see if zshell is installed.  If it is:
