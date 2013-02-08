@@ -3,12 +3,13 @@
 # .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
-
+# Call the install function before moving any file..
+install_zsh
 ########## Variables
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh private irbrc gitignore gitmodules gitconfig githelpers git gemrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim zshrc oh-my-zsh private irbrc gitignore gitmodules gitconfig githelpers gemrc"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -52,4 +53,3 @@ else
 fi
 }
 
-install_zsh
