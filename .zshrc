@@ -102,6 +102,12 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
+alias vim="stty stop '' -ixoff ; vim"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+# `Frozing' tty, so after any command terminal settings will be restored
+ttyctl -f
+
 # Initialize RVM
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/kainlite/.rvm/bin
 
@@ -111,6 +117,6 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-plugins=(git ruby rails3 bundler coffe gem git-extras git-flow github rvm screen)
+plugins=(git ruby rails3 bundler coffe gem git-extras debian github rvm screen)
 
 source $ZSH/oh-my-zsh.sh

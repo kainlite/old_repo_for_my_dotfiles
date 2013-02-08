@@ -22,7 +22,6 @@ set incsearch
 set hlsearch
 set pastetoggle=<C-p> 
 nnoremap <C-n> :set number!<CR>
-nnoremap <C-W> :w<CR>
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
@@ -59,7 +58,18 @@ set wildmode=longest,list
 " make tab completion for files/buffers act like bash
 set wildmenu
 let mapleader=","
-
+" Use CTRL-S for saving, also in Insert mode
+" command -nargs=0 -bar Update if &modified 
+"                           \|    if empty(bufname('%'))
+"                           \|        browse confirm write
+"                           \|    else
+"                           \|        confirm write
+"                           \|    endif
+"                           \|endif
+" nnoremap <silent> <C-S> :<C-u>Update<CR>
+noremap <C-S> :update<CR>
+" vnoremap <C-S> <C-C>:update<CR>
+" inoremap <C-S> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
