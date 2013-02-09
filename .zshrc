@@ -109,14 +109,11 @@ alias zshrc="vim ~/.zshrc"
 ttyctl -f
 
 # Initialize RVM
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/kainlite/.rvm/bin
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-#PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-plugins=(git ruby rails3 bundler coffe gem git-extras debian github rvm screen)
+plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(rbenv init -)"
