@@ -30,7 +30,7 @@ export SAVEHIST=$HISTSIZE
 # Use vim as the editor
 export EDITOR=vi
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
-set -o emacs
+set -o vi
 
 # Use C-x C-e to edit the current command line
 autoload -U edit-command-line
@@ -116,3 +116,5 @@ plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen)
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export `gnome-keyring-daemon --start`
