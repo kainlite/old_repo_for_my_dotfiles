@@ -3,8 +3,8 @@ require 'erb'
 
 desc 'Update all the updatable things'
 task :update do
-  puts %x{git pull}
-  puts %x{git submodule foreach git pull}
+  puts %x{git pull origin master}
+  puts %x{git submodule foreach git pull origin master}
 
   repositories = %w('.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh', '.dotfiles')
 
