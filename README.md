@@ -7,6 +7,10 @@ Dotfiles are set of default hidden files for configuration purpouses, there are 
 is just intended to satisfy my needs, yours may be different, so make your own, copy whatever you want,
 and there is no guarantee that my setup will work on your computer :D
 
+Interesting plugins for rbenv:
+[rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
+[rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems)
+
 For more info, just look at the original repository from where I forked almost everything:
 
 [dotfiles Gary Bernhardt](https://github.com/garybernhardt/dotfiles)
