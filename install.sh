@@ -21,7 +21,7 @@ else
     platform=$(uname);
     # If the platform is Linux, try an apt-get to install zsh and then recurse
     if [[ $platform == 'Linux' ]]; then
-        sudo apt-get -y install zsh wget
+        sudo apt-get -y install zsh wget git
         install_zsh
     fi
 fi
@@ -55,7 +55,7 @@ for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/.$file ~/.$file
+    ln -f -s $dir/.$file ~/.$file
 done
 # extra symbolic link for gitconfig
 ln -s $dir/.gitconfig ~/.gitrc
