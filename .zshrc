@@ -108,13 +108,13 @@ alias zshrc="vim ~/.zshrc"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 
-# Initialize RVM
+# Initialize VM
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 export `gnome-keyring-daemon --start`
+eval "$(rbenv init -)"
