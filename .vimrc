@@ -37,7 +37,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " This makes RVM work inside Vim. I have no idea why.
-set shell=bash
+set shell=zsh
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
