@@ -1,7 +1,31 @@
 #!/bin/bash
+# in case of error, blow up..
+set -e
 ############################
 # .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+###Function Definition
+function install_zsh {
+# Test to see if zshell is installed.  If it is:
+if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+    # Clone my oh-my-zsh repository from GitHub only if it isn't already present
+    if [[ ! -d $dir/oh-my-zsh/ ]]; then
+      wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+    fi
+    # Set the default shell to zsh if it isn't currently set to zsh
+    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+        chsh -s $(which zsh)
+    fi
+else
+    # If zsh isn't installed, get the platform of the current machine
+    platform=$(uname);
+    # If the platform is Linux, try an apt-get to install zsh and then recurse
+    if [[ $platform == 'Linux' ]]; then
+        sudo apt-get -y install zsh wget
+        install_zsh
+    fi
+fi
+}
 ############################
 # Call the install function before moving any file..
 install_zsh
@@ -32,26 +56,7 @@ for file in $files; do
 done
 # extra symbolic link for gitconfig
 ln -s $dir/.gitconfig ~/.gitrc
+# extra symbolic link for binaries
+ln -s $dir/bin ~/bin
 
-function install_zsh {
-# Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-    if [[ ! -d $dir/oh-my-zsh/ ]]; then
-      wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh  
-    fi
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
-    fi
-else
-    # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
-    if [[ $platform == 'Linux' ]]; then
-        sudo apt-get -y install zsh wget
-        install_zsh
-    fi
-fi
-}
-
+echo "All done.."
