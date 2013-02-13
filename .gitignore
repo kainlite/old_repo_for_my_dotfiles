@@ -115,3 +115,5 @@
 *.orig
 *.rej
 *.pyc
+.vim/undodir/*
+!.vim/undodir/.gitkeep

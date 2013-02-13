@@ -31,6 +31,11 @@ set switchbuf=useopen
 set numberwidth=5
 set showtabline=2
 set winwidth=79
+
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undodir
+
 " This makes RVM work inside Vim. I have no idea why.
 set shell=bash
 " Prevent Vim from clobbering the scrollback buffer. See
