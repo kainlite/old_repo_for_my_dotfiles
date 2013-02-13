@@ -47,6 +47,9 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
+# removing zshrc created by oh-my-zsh
+rm ~/.zshrc
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
