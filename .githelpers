@@ -16,9 +16,10 @@ AUTHOR="%C(bold blue)<%an>%Creset"
 REFS="%C(red)%d%Creset"
 SUBJECT="%s"
 
-colsep=$'\c_'  # i.e. ^_ (ASCII Unit Separator)
-               # colsep can be any single char that will never appear in the
-               # commit subject or any other field.
+colsep=$(echo '\x7f')
+# i.e. ^_ (ASCII Unit Separator)
+# colsep can be any single char that will never appear in the
+# commit subject or any other field.
 
 FORMAT="$HASH$colsep$RELATIVE_TIME$colsep$AUTHOR$colsep$REFS $SUBJECT"
 
