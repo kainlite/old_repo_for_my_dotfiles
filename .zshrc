@@ -22,6 +22,7 @@ export PATH="$HOME/bin:$PATH"
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
+alias gadd='git add --all'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
