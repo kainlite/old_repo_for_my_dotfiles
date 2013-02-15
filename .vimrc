@@ -20,6 +20,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+set number
 
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
@@ -27,7 +28,7 @@ set ignorecase smartcase
 set cursorline
 set cmdheight=2
 set switchbuf=useopen
-set numberwidth=5
+set numberwidth=4
 set showtabline=2
 set winwidth=79
 
@@ -75,9 +76,6 @@ noremap <C-S> :update<CR>
 " vnoremap <C-S> <C-C>:update<CR>
 " inoremap <C-S> <C-O>:update<CR>
 
-" set mode paste in insert mode and line number
-set pastetoggle=<C-p> 
-nnoremap <C-n> :set number!<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -286,6 +284,11 @@ map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 " insert new line without entering insert mode
 map <C-k> O<Esc>
 map <C-j> o<Esc>
+
+" set mode paste in insert mode and line number
+set pastetoggle=<C-p> 
+nnoremap <C-l> :set number!<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
