@@ -74,4 +74,7 @@
 [submodule ".vim/bundle/vim-yaml"]                                                                                                                       
   path = .vim/bundle/vim-yaml
   url = https://github.com/avakhov/vim-yaml
+[submodule ".vim/bundle/buffergator"]                                                                                                                       
+  path = .vim/bundle/buffergator
+  url = https://github.com/vim-scripts/Buffergator.git
 
