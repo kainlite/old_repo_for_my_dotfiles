@@ -20,8 +20,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
-set pastetoggle=<C-p> 
-nnoremap <C-n> :set number!<CR>
+
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
@@ -75,6 +74,10 @@ let mapleader=","
 noremap <C-S> :update<CR>
 " vnoremap <C-S> <C-C>:update<CR>
 " inoremap <C-S> <C-O>:update<CR>
+
+" set mode paste in insert mode and line number
+set pastetoggle=<C-p> 
+nnoremap <C-n> :set number!<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -280,6 +283,9 @@ map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
+" insert new line without entering insert mode
+map <C-k> O<Esc>
+map <C-j> o<Esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
