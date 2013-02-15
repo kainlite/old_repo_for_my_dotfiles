@@ -11,6 +11,9 @@ ZSH=$HOME/.oh-my-zsh
 autoload -U compinit
 compinit
 
+# Added slash when changing dirs 
+zstyle ':completion:*' special-dirs true
+
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
