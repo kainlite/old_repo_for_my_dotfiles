@@ -62,19 +62,22 @@
 [submodule ".vim/bundle/vim-rails"]                                                                
   path = .vim/bundle/vim-rails
   url = git://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-rake"]                                                                                                                            
+[submodule ".vim/bundle/vim-rake"]                                                                                                                         
   path = .vim/bundle/vim-rake
   url = git://github.com/tpope/vim-rake.git
-[submodule ".vim/bundle/vim-snipmate"]                                                                                                                        
+[submodule ".vim/bundle/vim-snipmate"]                                                                                                                     
   path = .vim/bundle/vim-snipmate
   url = https://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-surround"]                                                                                                                       
+[submodule ".vim/bundle/vim-surround"]                                                                                                               
   path = .vim/bundle/vim-surround
   url = git://github.com/tpope/vim-surround
 [submodule ".vim/bundle/vim-yaml"]                                                                                                                       
   path = .vim/bundle/vim-yaml
   url = https://github.com/avakhov/vim-yaml
-[submodule ".vim/bundle/Buffergator"]                                                                                                                       
+[submodule ".vim/bundle/Buffergator"]                                                                                                                      
   path = .vim/bundle/Buffergator
   url = https://github.com/vim-scripts/Buffergator.git
-
+[submodule ".vim/bundle/vim-autoclose"]
+  path = .vim/bundle/vim-autoclose
+  url = https://github.com/Townk/vim-autoclose.git
+  
