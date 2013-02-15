@@ -282,8 +282,8 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " insert new line without entering insert mode
-map <C-k> O<Esc>
-map <C-j> o<Esc>
+map <leader>k O<Esc>
+map <leader>j o<Esc>
 
 " set mode paste in insert mode and line number
 set pastetoggle=<C-p> 
