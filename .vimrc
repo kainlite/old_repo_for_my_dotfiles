@@ -72,7 +72,7 @@ let mapleader=","
 "                           \|    endif
 "                           \|endif
 " nnoremap <silent> <C-S> :<C-u>Update<CR>
-noremap <C-S> :update<CR>
+noremap <leader>s :update<CR>
 " vnoremap <C-S> <C-C>:update<CR>
 " inoremap <C-S> <C-O>:update<CR>
 
@@ -288,6 +288,10 @@ map <leader>j o<Esc>
 " set mode paste in insert mode and line number
 set pastetoggle=<C-p> 
 nnoremap <C-l> :set number!<CR>
+
+" switch lines upside down and reverse
+noremap <silent> gj :m-2<CR>
+noremap <silent> gk :m+<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
