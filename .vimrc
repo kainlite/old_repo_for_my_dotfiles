@@ -293,6 +293,26 @@ nnoremap <C-l> :set number!<CR>
 noremap <silent> gj :m-2<CR>
 noremap <silent> gk :m+<CR>
 
+" erb mappings 
+" =============
+" Surround.vim
+" =============
+" Use v or # to get a variable interpolation (inside of a string)}
+" ysiw#   Wrap the token under the cursor in #{}
+" v...s#  Wrap the selection in #{}
+let g:surround_113 = "#{\r}"   " v
+" Select text in an ERb file with visual mode and then press ysaw- or ysaw=
+" Or yss- to do entire line.
+let g:surround_45 = "<% \r %>"    " -
+let g:surround_61 = "<%= \r %>"   " =
+
+map <Leader>y <Plug>Yssurround=<cr>
+map <Leader>i <Plug>Yssurround-<cr>
+map <leader># ysiw#
+
+autocmd FileType ruby let b:surround_35 = "#{\r}"
+autocmd FileType eruby let b:surround_35 = "#{\r}"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
