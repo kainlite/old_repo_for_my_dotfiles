@@ -117,3 +117,4 @@
 *.pyc
 .vim/undodir/*
 !.vim/undodir/.gitkeep
+.vim/.netrwhist
