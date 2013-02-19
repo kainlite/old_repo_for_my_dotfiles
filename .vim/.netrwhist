@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/kainlite/Dropbox/Webs/activos/app'
-let g:netrw_dirhist_2='/home/kainlite/Dropbox/Webs/activos/app/models'
-let g:netrw_dirhist_3='/home/kainlite/Dropbox/Webs/activos/app'
-let g:netrw_dirhist_4='/home/kainlite/Dropbox/Webs/libreduca/app'
-let g:netrw_dirhist_5='/home/kainlite/Dropbox/Webs/activos/app'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/kainlite/Dropbox/Webs/libreduca'

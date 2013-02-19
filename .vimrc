@@ -169,8 +169,8 @@ map <Down> <Nop>
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>v :view %%
+map <leader>ee :edit %%
+map <leader>vv :view %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
@@ -280,6 +280,15 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+map <leader>ej :Rjavascript 
+map <leader>ev :Rview 
+map <leader>ec :Rcontroller 
+map <leader>em :Rmodel 
+map <leader>es :Rstylesheet 
+map <leader>eh :Rhelper 
+map <leader>et :Rtree<cr>
+map <leader>ed :Rmigration 
 
 " insert new line without entering insert mode
 map <leader>k O<Esc>
