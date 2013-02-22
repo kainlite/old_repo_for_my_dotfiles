@@ -106,8 +106,8 @@ augroup vimrcEx
 
   " Leave the return key alone when in command line windows, since it's used
   " to run commands there.
-  autocmd! CmdwinEnter * :unmap <cr>
-  autocmd! CmdwinLeave * :call MapCR()
+  " autocmd! CmdwinEnter * :unmap <cr>
+  " autocmd! CmdwinLeave * :call MapCR()
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -139,8 +139,9 @@ imap <c-c> <esc>
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr>
 endfunction
-call MapCR()
+" call MapCR()
 nnoremap <leader><leader> <c-^>
+nnoremap <leader><cr> :nohlsearch<cr> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
@@ -296,7 +297,7 @@ map <leader>j o<Esc>
 
 " set mode paste in insert mode and line number
 set pastetoggle=<C-p> 
-nnoremap <C-l> :set number!<CR>
+nnoremap <leader>l :set number!<CR>
 
 " switch lines upside down and reverse
 noremap <silent> gj :m-2<CR>
