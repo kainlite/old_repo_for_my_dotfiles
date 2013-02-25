@@ -3,6 +3,13 @@
 
 call pathogen#runtime_append_all_bundles()
 
+" Set encoding if available
+if has('multi_byte')
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -300,8 +307,23 @@ set pastetoggle=<C-p>
 nnoremap <leader>l :set number!<CR>
 
 " switch lines upside down and reverse
-noremap <silent> gj :m-2<CR>
-noremap <silent> gk :m+<CR>
+noremap <silent> gk :m-2<CR>
+noremap <silent> gj :m+<CR>
+
+" duplicate line, preserve cursor
+noremap <C-d> mzyyp`z
+
+" Convenient maps for vim-fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>gp :Git push<CR>
+
+" Invisibles characters setup
+nmap <Leader>L :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
 
 " erb mappings 
 " =============
