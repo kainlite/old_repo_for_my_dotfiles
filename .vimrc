@@ -180,6 +180,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>ee :edit %%
 map <leader>vv :view %%
 
+" Close all buffers
+cmap bq :bufdo q<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
