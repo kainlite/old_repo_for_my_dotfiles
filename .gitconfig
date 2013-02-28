@@ -43,6 +43,7 @@
   ra = !git r --all
   l = "!bash -c '. ~/.githelpers && pretty_git_log'"
   la = !git l --all
+  lg = log --graph
 
 [merge]
   tool = vimdiff
@@ -51,4 +52,4 @@
   helper = cache --timeout=3600
 
 [format]
-  pretty='%C(yellow)%h%Cred%d%Creset - %C(bold blue)%an %Creset: %s %Cgreen(%cr)'
+  pretty=%C(yellow)%h%Cred%d%Creset - %C(bold blue)%an %Creset: %s %Cgreen(%cr)
