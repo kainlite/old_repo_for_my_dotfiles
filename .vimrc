@@ -181,7 +181,7 @@ map <leader>ee :edit %%
 map <leader>vv :view %%
 
 " Close all buffers
-cmap bq :bufdo q<CR>
+cmap <leader>rq :bufdo q<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
