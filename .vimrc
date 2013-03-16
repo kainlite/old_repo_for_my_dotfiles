@@ -148,7 +148,7 @@ function! MapCR()
 endfunction
 " call MapCR()
 nnoremap <leader><leader> <c-^>
-nnoremap <leader><cr> :nohlsearch<cr> 
+nnoremap <leader>m :nohlsearch<cr> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
