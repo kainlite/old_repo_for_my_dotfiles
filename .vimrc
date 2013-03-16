@@ -1,6 +1,8 @@
 " This is Gary Bernhardt's .vimrc file
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
+execute pathogen#infect()
+execute pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " Set encoding if available
@@ -193,6 +195,23 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+" Strip annoying whitespaces
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+" Autocall and key binding
+autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROMOTE VARIABLE TO RSPEC LET

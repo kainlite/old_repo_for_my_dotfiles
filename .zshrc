@@ -122,3 +122,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 export `gnome-keyring-daemon --start`
 eval "$(rbenv init -)"
+
+# copy aliases
+alias ccopy="xclip -sel clip"
+alias cpaste="xclip -sel clip -o"
