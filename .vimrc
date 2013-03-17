@@ -153,8 +153,8 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>m :nohlsearch<cr> 
 
 " for linux and windows users (using the control key)
-map <c-a> gt
-map <c-s> gT
+map <c-a> gT
+map <c-s> gt
 map <c-1> 1gt
 map <c-2> 2gt
 map <c-3> 3gt
