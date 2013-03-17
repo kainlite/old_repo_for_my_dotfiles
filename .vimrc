@@ -152,6 +152,20 @@ endfunction
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>m :nohlsearch<cr> 
 
+" for linux and windows users (using the control key)
+map <c-s> gt
+map <c-S> gT
+map <c-1> 1gt
+map <c-2> 2gt
+map <c-3> 3gt
+map <c-4> 4gt
+map <c-5> 5gt
+map <c-6> 6gt
+map <c-7> 7gt
+map <c-8> 8gt
+map <c-9> 9gt
+map <c-0> :tablast<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
