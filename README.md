@@ -2,7 +2,7 @@
 
 ### [My dotfiles](https://github.com/kainlite/dotfiles)
 
-![collabocats](/images/collabocats.jpg)
+![collabocats](http://octodex.github.com/images/collabocats.jpg)
 
 Dotfiles are set of default hidden files for configuration purpouses, there are no install instructions,
 'cause there is pretty clear what is happening, just check install.sh, and Rakefile, this repository
