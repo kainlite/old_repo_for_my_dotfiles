@@ -224,7 +224,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 " Autocall and key binding
-autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.erb,*.py,*.js :call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
