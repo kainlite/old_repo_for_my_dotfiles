@@ -119,3 +119,5 @@
 !.vim/undodir/.gitkeep
 .vim/.netrwhist
 .netrwhist
+Session.vim
+.dotfiles/Session.vim

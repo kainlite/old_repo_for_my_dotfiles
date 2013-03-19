@@ -106,7 +106,7 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
-alias vim="stty stop '' -ixoff ; vim"
+alias vim="stty stop '' -ixoff ; vim ~/.dotfiles/Session.vim"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 # `Frozing' tty, so after any command terminal settings will be restored
