@@ -54,17 +54,13 @@ alias t="script/test $*"
 alias f="script/features $*"
 function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
-function das() {
-    cd ~/proj/destroyallsoftware.com/destroyallsoftware.com
-    pwd
-    export RUBY_HEAP_MIN_SLOTS=1000000
-    export RUBY_HEAP_SLOTS_INCREMENT=1000000
-    export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-    export RUBY_GC_MALLOC_LIMIT=1000000000
-    export RUBY_HEAP_FREE_MIN=500000
-    . /Volumes/misc/filing/business/destroy\ all\ software\ llc/s3.sh
-    . /Volumes/misc/filing/business/destroy\ all\ software\ llc/braintree.sh
-}
+
+# Ruby exports
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
 
 # Activate the closest virtualenv by looking in parent directories.
 activate_virtualenv() {
