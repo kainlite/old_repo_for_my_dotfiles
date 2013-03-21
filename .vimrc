@@ -12,6 +12,13 @@ if has('multi_byte')
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+" Set spellcheck
+if has('spell')
+  " set spell
+  set spelllang=en_us
+  nnoremap _s :set spell!<CR>
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

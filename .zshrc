@@ -123,3 +123,5 @@ eval "$(rbenv init -)"
 # copy aliases
 alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
+alias s="screen"
+alias sr="screen -r"

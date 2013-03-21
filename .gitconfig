@@ -53,3 +53,6 @@
 
 [format]
   pretty=%C(yellow)%h%Cred%d%Creset - %C(bold blue)%an %Creset: %s %Cgreen(%cr)
+
+[core]
+  excludesfile = ~/.gitignore_global
