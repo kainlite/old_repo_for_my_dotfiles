@@ -5,5 +5,5 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 defscrollback 5000
 term screen-256color
 
-bindkey "^[[1;5D" prev  # change window with ctrl-left
-bindkey "^[[1;5C" next  # change window with ctrl-right
+# bindkey "^[[1;5D" prev  # change window with ctrl-left
+# bindkey "^[[1;5C" next  # change window with ctrl-right
