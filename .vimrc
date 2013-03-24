@@ -3,7 +3,9 @@
 
 execute pathogen#infect()
 execute pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" Deprecated
+" call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 
 " Set encoding if available
 if has('multi_byte')
