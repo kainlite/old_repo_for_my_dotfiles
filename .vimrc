@@ -337,7 +337,7 @@ map <leader>ec :Rcontroller
 map <leader>em :Rmodel 
 map <leader>es :Rstylesheet 
 map <leader>eh :Rhelper 
-map <leader>et :Rtree<cr>
+map <leader>et :NERDtree<cr>
 map <leader>ed :Rmigration 
 
 " insert new line without entering insert mode
