@@ -125,3 +125,14 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias s="screen"
 alias sr="screen -r"
+
+# Restore the last backgrounded task with Ctrl-V
+function foreground_task() { 
+  fg 
+}
+
+# Define a widget called "run_info", mapped to our function above.
+zle -N foreground_task
+
+# Bind it to ESC-i.
+bindkey "\Cv" foreground_task
