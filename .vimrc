@@ -109,7 +109,7 @@ augroup vimrcEx
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-  autocmd FileType python set sw=4 sts=4 et
+  autocmd FileType python set sw=2 sts=2 et
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 
@@ -233,7 +233,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 " Autocall and key binding
-autocmd BufWritePre *.rb,*.erb,*.py,*.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.erb,*.py,*.js call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -369,6 +369,9 @@ nnoremap <Leader>gp :Git push<CR>
 " Invisibles characters setup
 nmap <Leader>L :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
+
+" Toggle Gundo
+nnoremap <F6> :GundoToggle<CR>
 
 " erb mappings 
 " =============
