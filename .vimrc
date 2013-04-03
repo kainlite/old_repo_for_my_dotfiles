@@ -353,7 +353,7 @@ nmap <silent> <C-k> [e
 nmap <silent> <C-j> ]e
 
 vmap <silent> <C-k> [egv
-vmap <silent> <C-k> [egv
+vmap <silent> <C-j> ]egv
 
 " duplicate line, preserve cursor
 noremap <C-d> mzyyp`z
