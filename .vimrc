@@ -44,7 +44,7 @@ set number
 set ignorecase smartcase
 " highlight current line
 set cursorline
-set cmdheight=2
+set cmdheight=1
 set switchbuf=useopen
 set numberwidth=4
 set showtabline=2
