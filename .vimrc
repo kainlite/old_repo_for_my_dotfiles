@@ -349,8 +349,11 @@ set pastetoggle=<C-p>
 nnoremap <leader>l :set number!<CR>
 
 " switch lines upside down and reverse
-noremap <silent> gk :m-2<CR>
-noremap <silent> gj :m+<CR>
+nmap <silent> <C-k> [e
+nmap <silent> <C-j> ]e
+
+vmap <silent> <C-k> [egv
+vmap <silent> <C-k> [egv
 
 " duplicate line, preserve cursor
 noremap <C-d> mzyyp`z

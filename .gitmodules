@@ -91,4 +91,6 @@
 [submodule ".vim/bundle/vim-obsession"]
   path = .vim/bundle/vim-obsession
   url = https://github.com/tpope/vim-obsession.git
-
+[submodule ".vim/bundle/vim-unimpaired"]
+  path = .vim/bundle/vim-unimpaired
+  url = https://github.com/tpope/vim-unimpaired.git
