@@ -342,10 +342,13 @@ map <leader>h :Rhelper
 map <leader>t :NERDtree<cr>
 map <leader>d :Rmigration 
 map <leader>f :Rfunctionaltest 
-map <leader>a :Rintegrationtest 
+map <leader>e :Rintegrationtest 
 map <leader>u :Runittest 
 map <leader>r :Rake 
 map <leader>t :Rake<cr> 
+map <leader>k :Rlocale 
+map <leader>a :A<cr>
+map <leader>z :R<cr>
 
 " insert new line without entering insert mode
 " map <leader>k O<Esc>
