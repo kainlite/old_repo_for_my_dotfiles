@@ -34,9 +34,9 @@
 [submodule ".vim/bundle/ruby-matchit"]
   path = .vim/bundle/ruby-matchit
   url = https://github.com/vim-scripts/ruby-matchit.git
-[submodule ".vim/bundle/snipmate-snippets"]
-  path = .vim/bundle/snipmate-snippets
-  url = https://github.com/honza/snipmate-snippets.git
+[submodule ".vim/bundle/vim-snippets"]
+  path = .vim/bundle/vim-snippets
+  url = https://github.com/honza/vim-snippets.git 
 [submodule ".vim/bundle/tlib_vim"]
   path = .vim/bundle/tlib_vim
   url = https://github.com/tomtom/tlib_vim.git
