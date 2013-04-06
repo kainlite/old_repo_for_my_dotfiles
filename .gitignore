@@ -121,3 +121,7 @@
 .netrwhist
 Session.vim
 .dotfiles/Session.vim
+.mutt/
+.libreduca
+.kainlite
+.passwd.gpg
