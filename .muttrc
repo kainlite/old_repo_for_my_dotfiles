@@ -53,7 +53,17 @@ set move = no
 # Auto-delete marked messages
 set delete = yes
 
+# imap folders/labels
 set imap_check_subscribed=yes
+
+# for posponed messages
+set recall = yes
+
+# I don't want to print, save the trees!
+set print = no
+
+# Include original message in reply
+set include = yes
 
 # Cache
 set header_cache  = ~/.mutt/cache/headers
