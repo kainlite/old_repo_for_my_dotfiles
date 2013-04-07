@@ -55,11 +55,11 @@ set imap_check_subscribed=yes
 # Cache
 set header_cache  = ~/.mutt/cache/headers
 set message_cachedir  = ~/.mutt/cache/bodies
-# set certificate_file  = ~/.mutt/certificates
+set certificate_file  = ~/.mutt/certificates
 
 # Sign mails
 source ~/.mutt/gpg.rc 
-set crypt_autosign = yes
+set crypt_autosign = no
 
 #--------#
 # Macros #
