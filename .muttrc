@@ -72,6 +72,10 @@ set wait_key = no
 macro index \cb   "|urlview\n"
 macro pager \cb   "|urlview\n"
 
+# View attachments
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+bind attach <return> view-mailcap
+
 # Cache
 set header_cache  = ~/.mutt/cache/headers
 set message_cachedir  = ~/.mutt/cache/bodies
