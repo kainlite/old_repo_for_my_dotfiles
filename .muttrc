@@ -65,6 +65,13 @@ set print = no
 # Include original message in reply
 set include = yes
 
+# Disabling "press any key"
+set wait_key = no
+
+# View URLs inside Mutt
+macro index \cb   "|urlview\n"
+macro pager \cb   "|urlview\n"
+
 # Cache
 set header_cache  = ~/.mutt/cache/headers
 set message_cachedir  = ~/.mutt/cache/bodies
