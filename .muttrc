@@ -48,7 +48,10 @@ source ~/.mutt/.libreduca
 # This should be ' »›-‹L' to match Gmail, but $to_chars breaks on unicode.
 set to_chars    = ' +>-<L'
 # Don't move read mail.
-set move    = no
+set move = no
+
+# Auto-delete marked messages
+set delete = yes
 
 set imap_check_subscribed=yes
 
@@ -105,6 +108,8 @@ set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 # Index Key Bindings ---------------------------------
 bind index gg       first-entry
 bind index G        last-entry
+
+bind index i        imap-fetch-mail
 
 bind index R        group-reply
 bind index <tab>    sync-mailbox
