@@ -45,6 +45,9 @@ source ~/.mutt/.kainlite
 # Setup for user2:
 source ~/.mutt/.libreduca
 
+# Setup for user3:
+source ~/.mutt/.libreunir
+
 # This should be ' »›-‹L' to match Gmail, but $to_chars breaks on unicode.
 set to_chars    = ' +>-<L'
 # Don't move read mail.
