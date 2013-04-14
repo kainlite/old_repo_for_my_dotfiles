@@ -197,6 +197,18 @@ map <Down> <Nop>
 autocmd BufWritePre *.rb,*.erb,*.py,*.js call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
+" Strip annoying whitespaces
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROMOTE VARIABLE TO RSPEC LET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -286,8 +298,10 @@ if &term =~ '^screen' && exists('$TMUX')
     execute "set <xDown>=\e[1;*B"
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
-    execute "set <xHome>=\e[1;*H"
-    execute "set <xEnd>=\e[1;*F"
+    map <Esc>OH <Home>
+    map! <Esc>OH <Home>
+    map <Esc>OF <End>
+    map! <Esc>OF <End>
     execute "set <Insert>=\e[2;*~"
     execute "set <Delete>=\e[3;*~"
     execute "set <PageUp>=\e[5;*~"
@@ -305,4 +319,3 @@ if &term =~ '^screen' && exists('$TMUX')
     execute "set <F11>=\e[23;*~"
     execute "set <F12>=\e[24;*~"
 endif
-
