@@ -22,7 +22,9 @@ export PATH="$HOME/bin:$PATH"
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
-alias gadd='git add --all'
+alias gadd='git add --all .'
+alias git='LC_ALL=en_US git'
+alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
@@ -91,7 +93,11 @@ python_module_dir () {
 #
 #   $ cat `up .tmux.conf`
 #   set -g default-terminal "screen-256color"
-#
+
+# Autostart tmux
+[[ `tput colors` == "256" ]] || TERM=screen-256color ]]
+ZSH_TMUX_AUTOSTART="true"
+
 function up()
 {
     local DIR=$PWD
@@ -112,13 +118,12 @@ ttyctl -f
 # Initialize VM
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen fcatena)
+plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen fcatena tmux)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-export `gnome-keyring-daemon --start`
-eval "$(rbenv init -)"
+[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" ]
 
 # copy aliases
 alias ccopy="xclip -sel clip"
