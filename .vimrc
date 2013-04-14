@@ -25,6 +25,10 @@ if !exists('g:fugitive_git_executable')
   let g:fugitive_git_executable='LC_ALL=en_US git'
 endif
 
+if exists('+writebackup')
+  set nobackup
+  set writebackup
+endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

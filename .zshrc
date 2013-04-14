@@ -10,6 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 # Initialize completion
 autoload -U compinit
 compinit
+# unsetopt correct
 
 # Added slash when changing dirs 
 zstyle ':completion:*' special-dirs true
@@ -95,7 +96,7 @@ python_module_dir () {
 #   set -g default-terminal "screen-256color"
 
 # Autostart tmux
-[[ `tput colors` == "256" ]] || TERM=screen-256color ]]
+[[ `tput colors` == "256" ]] || TERM=screen-256color 
 ZSH_TMUX_AUTOSTART="true"
 
 function up()
@@ -123,7 +124,7 @@ plugins=(git ruby rails3 bundler coffe gem git-extras debian github screen fcate
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" ]
+[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" 
 
 # copy aliases
 alias ccopy="xclip -sel clip"
