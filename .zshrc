@@ -142,3 +142,7 @@ zle -N foreground_task
 
 # Bind it to ESC-i.
 bindkey "\Cv" foreground_task
+
+# Back and forth history search for current command (fix for tmux)
+bindkey "${terminfo[kcuu1]}" up-line-or-search
+bindkey "${terminfo[kcud1]}" down-line-or-search
