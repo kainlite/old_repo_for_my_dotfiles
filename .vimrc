@@ -241,6 +241,7 @@ map <leader>z :R<cr>
 
 " set mode paste in insert mode and line number
 set pastetoggle=<C-p> 
+noremap <leader>n :set paste<CR>:put  *<CR>:set nopaste<CR>
 nnoremap <leader>l :set number!<CR>
 
 " switch lines upside down and reverse
