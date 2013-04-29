@@ -146,3 +146,7 @@ bindkey "\Cv" foreground_task
 # Back and forth history search for current command (fix for tmux)
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
+
+# Move in the shell with arrows
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
