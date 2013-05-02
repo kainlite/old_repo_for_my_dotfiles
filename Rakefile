@@ -33,7 +33,7 @@ private
 def copy_files
   replace_all = true
   
-  files = %w[. .. .git .bashrc .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
+  files = %w[.git .bashrc .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
 
   files << '.oh-my-zsh/custom/plugins/fcatena'
 
