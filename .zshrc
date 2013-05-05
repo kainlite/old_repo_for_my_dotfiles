@@ -119,7 +119,7 @@ ttyctl -f
 # Initialize VM
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-plugins=(git ruby rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash)
+plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
