@@ -154,3 +154,8 @@ bindkey "${terminfo[kcud1]}" down-line-or-search
 # Move in the shell with arrows
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
+
+# Custom functions
+c() { cd ~/Webs/$1; }
+_c() { _files -W ~/Webs -/; }
+compdef _c c

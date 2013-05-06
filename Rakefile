@@ -35,8 +35,6 @@ def copy_files
   
   files = %w[.bashrc .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
 
-  files << '.oh-my-zsh/custom/plugins/fcatena'
-
   files.each do |file|
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
 
