@@ -1,16 +1,20 @@
 # Set custom prompt
 ZSH_THEME=gentoo
 ZSH=$HOME/.oh-my-zsh
+DISABLE_CORRECTION="true"
 
-#setopt PROMPT_SUBST
-#autoload -U promptinit
-#promptinit
-#prompt grb
+# Configuring history
+unsetopt share_history
+setopt inc_append_history
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+setopt hist_no_store
 
 # Initialize completion
 autoload -U compinit
 compinit
-# unsetopt correct
+unsetopt correct
 
 # Added slash when changing dirs 
 zstyle ':completion:*' special-dirs true
