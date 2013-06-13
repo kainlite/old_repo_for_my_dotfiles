@@ -19,10 +19,6 @@ unsetopt correct
 # Added slash when changing dirs 
 zstyle ':completion:*' special-dirs true
 
-# Add paths
-export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
-export PATH="$HOME/bin:$PATH"
-
 # Colorize terminal
 export TERM='xterm-color'
 alias ls='ls -G'
@@ -127,6 +123,10 @@ plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github scree
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+# Add paths
+export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
+export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
 
 [ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" 
 

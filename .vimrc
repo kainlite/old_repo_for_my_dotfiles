@@ -138,21 +138,26 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>y "*y
+" Default move with display lines
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
+"
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 imap <c-c> <esc>
+
 " Clear the search buffer when hitting return
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr>
 endfunction
-" call MapCR()
+
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>. :nohlsearch<cr> 
 nnoremap _ts :silent !tmux set status<CR>
@@ -195,6 +200,7 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROMOTE VARIABLE TO RSPEC LET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -271,6 +277,7 @@ let g:surround_61 = "<%= \r %>"   " =
 map <Leader>y <Plug>Yssurround=<cr>
 map <Leader>i <Plug>Yssurround-<cr>
 map <leader># ysiw#
+" map <leader>y "*y
 
 autocmd FileType ruby let b:surround_35 = "#{\r}"
 autocmd FileType eruby let b:surround_35 = "#{\r}"
