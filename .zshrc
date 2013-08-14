@@ -24,7 +24,7 @@ zstyle ':completion:*' special-dirs true
 alias ls='ls -G'
 alias ll='ls -lG'
 alias gadd='git add --all .'
-alias git='LANG=en_US.UTF-8 git'
+alias git='LANGUAGE=en_US.UTF-8 git'
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -118,6 +118,11 @@ ttyctl -f
 
 # Initialize VM
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# Java exports
+export J2REDIR=/opt/java/jre
+export PATH=$PATH:/opt/java/jre/bin
+export JAVA_HOME=${JAVA_HOME:-/opt/java/jre}
 
 plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash)
 
