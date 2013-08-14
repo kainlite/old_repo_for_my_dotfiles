@@ -20,11 +20,11 @@ unsetopt correct
 zstyle ':completion:*' special-dirs true
 
 # Colorize terminal
-export TERM='xterm-color'
+# export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias gadd='git add --all .'
-alias git='LC_ALL=en_US git'
+alias git='LANG=en_US.UTF-8 git'
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -96,7 +96,7 @@ python_module_dir () {
 #   set -g default-terminal "screen-256color"
 
 # Autostart tmux
-[[ `tput colors` == "256" ]] || TERM=screen-256color 
+[[ `tput colors` == "256" ]] # || TERM=screen-256color 
 ZSH_TMUX_AUTOSTART="true"
 
 function up()
@@ -117,7 +117,7 @@ alias zshrc="vim ~/.zshrc"
 ttyctl -f
 
 # Initialize VM
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash)
 

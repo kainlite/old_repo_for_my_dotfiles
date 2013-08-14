@@ -6,6 +6,9 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   
+  puts %x{rm -rf $HOME/.dotfiles/.vim/bundle}
+  puts %x{mkdir $HOME/.dotfiles/.vim/bundle}
+  puts %x{git submodule update}
   puts %x{git submodule foreach git checkout master}
 
   copy_files
@@ -33,7 +36,7 @@ private
 def copy_files
   replace_all = true
   
-  files = %w[.bashrc .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
+  files = %w[.vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
 
   files.each do |file|
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
