@@ -8,6 +8,7 @@ task :install do
   
   puts %x{rm -rf $HOME/.dotfiles/.vim/bundle}
   puts %x{mkdir $HOME/.dotfiles/.vim/bundle}
+  puts %x{git submodule init}
   puts %x{git submodule update}
   puts %x{git submodule foreach git checkout master}
 
