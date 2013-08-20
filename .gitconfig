@@ -40,9 +40,10 @@
   pretty=%C(yellow)%h%Cred%d%Creset - %C(bold blue)%an %Creset: %s %Cgreen(%cr)
 
 [core]
+  editor = vim
   excludesfile = ~/.gitignore_global
 
 [push]
   default = simple
 [init]
-	templatedir = ~/.git_template
+    templatedir = ~/.git_template
