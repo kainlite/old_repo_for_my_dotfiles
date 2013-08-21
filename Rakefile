@@ -37,7 +37,10 @@ private
 def copy_files
   replace_all = true
   
-  files = %w[.vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers .gemrc .muttrc .git_template .xmodmap]
+  files = %w[
+    .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers 
+    .gemrc .muttrc .git_template .xmodmap .jrubyrc .bashrc
+  ]
 
   files.each do |file|
     puts %x{mkdir -p "$HOME/#{File.dirname(file)}"} if file =~ /\//
