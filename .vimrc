@@ -59,7 +59,7 @@ set switchbuf=useopen
 set numberwidth=4
 set showtabline=2
 set winwidth=79
-set ttimeoutlen=200
+set ttimeoutlen=50
 
 " Maintain undo history between sessions
 set undofile
