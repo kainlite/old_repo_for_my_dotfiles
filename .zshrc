@@ -59,11 +59,11 @@ function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
 
 # Ruby exports
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=1000
+export RUBY_HEAP_SLOTS_INCREMENT=1
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.8
+export RUBY_GC_MALLOC_LIMIT=1000000
+export RUBY_HEAP_FREE_MIN=50000
 
 # Activate the closest virtualenv by looking in parent directories.
 activate_virtualenv() {
