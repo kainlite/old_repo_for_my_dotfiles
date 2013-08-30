@@ -20,7 +20,6 @@ unsetopt correct
 zstyle ':completion:*' special-dirs true
 
 # Colorize terminal
-# export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias gadd='git add --all .'
@@ -35,9 +34,9 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
 # Use vim as the editor
-export EDITOR=vi
+export EDITOR=vim
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
-set -o vi
+set -o vim
 
 # Use C-x C-e to edit the current command line
 autoload -U edit-command-line
