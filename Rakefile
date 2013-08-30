@@ -41,7 +41,7 @@ def copy_files
   
   files = %w[
     .vimrc .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers 
-    .gemrc .muttrc .git_template .xmodmap .jrubyrc .bashrc .autotest
+    .gemrc .muttrc .git_template .xmodmap .jrubyrc .bashrc .autotest .tmux.conf
   ]
 
   files.each do |file|
