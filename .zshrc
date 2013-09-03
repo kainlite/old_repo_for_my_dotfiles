@@ -34,9 +34,9 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
 # Use vim as the editor
-export EDITOR=vim
+export EDITOR=vi
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
-set -o vim
+set -o vi
 
 # Use C-x C-e to edit the current command line
 autoload -U edit-command-line
