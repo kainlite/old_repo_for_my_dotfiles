@@ -163,3 +163,6 @@ bindkey '^[[1;5D' backward-word
 c() { cd ~/Webs/$1; }
 _c() { _files -W ~/Webs -/; }
 compdef _c c
+
+# Setting wine to win32
+export WINEARCH=win32
