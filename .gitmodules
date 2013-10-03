@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/liquid"]
 	path = .vim/bundle/liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule ".vim/bundle/tags"]
+	path = .vim/bundle/tags
+	url = https://github.com/szw/vim-tags.git
