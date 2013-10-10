@@ -1,6 +1,3 @@
-[submodule ".vim/bundle/Command-T"]
-	path = .vim/bundle/Command-T
-	url = https://github.com/wincent/Command-T.git
 [submodule ".vim/bundle/vim-makegreen"]
 	path = .vim/bundle/vim-makegreen
 	url = git@github.com:garybernhardt/vim-makegreen.git
@@ -10,9 +7,6 @@
 [submodule ".vim/bundle/L9"]
 	path = .vim/bundle/L9
 	url = https://github.com/vim-scripts/L9
-[submodule ".vim/bundle/vim-fuzzyfinder"]
-	path = .vim/bundle/vim-fuzzyfinder
-	url = https://github.com/clones/vim-fuzzyfinder
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
@@ -91,9 +85,6 @@
 [submodule ".vim/bundle/vim-unimpaired"]
   path = .vim/bundle/vim-unimpaired
   url = https://github.com/tpope/vim-unimpaired.git
-[submodule ".vim/bundle/Gundo"]
-  path = .vim/bundle/Gundo
-  url = https://github.com/vim-scripts/Gundo.git
 [submodule ".vim/bundle/vim-dispatch"]
 	path = .vim/bundle/vim-dispatch
 	url = git://github.com/tpope/vim-dispatch.git
@@ -118,3 +109,9 @@
 [submodule ".vim/bundle/tags"]
 	path = .vim/bundle/tags
 	url = https://github.com/szw/vim-tags.git
+[submodule ".rbenv"]
+	path = .rbenv
+	url = https://github.com/sstephenson/rbenv
+[submodule ".pyenv"]
+	path = .pyenv
+	url = https://github.com/yyuu/pyenv
