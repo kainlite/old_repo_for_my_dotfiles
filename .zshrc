@@ -166,3 +166,6 @@ compdef _c c
 
 # Setting wine to win32
 export WINEARCH=win32
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
