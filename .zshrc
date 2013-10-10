@@ -132,7 +132,13 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
 
+# rbenv initialization
 [ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" 
+
+# pyenv initialization
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # copy aliases
 alias ccopy="xclip -sel clip"
@@ -166,6 +172,3 @@ compdef _c c
 
 # Setting wine to win32
 export WINEARCH=win32
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
