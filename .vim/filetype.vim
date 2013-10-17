@@ -10,6 +10,7 @@ augroup markdown
 
     au! BufRead,BufNewFile *.mkd   setfiletype mkd
     au! BufRead,BufNewFile *.markdown   setfiletype mkd
+    au! BufRead,BufNewFile *.plg  setfiletype prolog
 
 augroup END
 
