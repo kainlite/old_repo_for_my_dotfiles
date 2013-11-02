@@ -145,6 +145,7 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias s="screen"
 alias sr="screen -r"
+alias hugs="hugs -98 -E'vim'"
 
 # Restore the last backgrounded task with Ctrl-V
 function foreground_task() { 
