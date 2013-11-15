@@ -259,8 +259,15 @@ nnoremap <Leader>gp :Git push<CR>
 nmap <Leader>L :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-" Toggle Gundo
-nnoremap <F6> :GundoToggle<CR>
+" Inline execution
+" Depends on gems: rcodetools and fastri
+nmap <buffer> <F7> <Plug>(xmpfilter-run)
+xmap <buffer> <F7> <Plug>(xmpfilter-run)
+imap <buffer> <F7> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F6> <Plug>(xmpfilter-mark)
+xmap <buffer> <F6> <Plug>(xmpfilter-mark)
+imap <buffer> <F6> <Plug>(xmpfilter-mark)
 
 " erb mappings 
 " =============
