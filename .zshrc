@@ -123,7 +123,7 @@ export J2REDIR=/opt/java/jre
 export PATH=$PATH:/opt/java/jre/bin
 export JAVA_HOME=${JAVA_HOME:-/opt/java/jre}
 
-plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash)
+plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash archlinux)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
