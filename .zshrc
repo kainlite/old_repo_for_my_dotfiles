@@ -57,6 +57,8 @@ alias f="script/features $*"
 function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
 
+alias papply="puppet apply /home/kainlite/Webs/puppet/manifests/site.pp --modulepath=/home/kainlite/Webs/puppet/modules/ $*"
+
 # Ruby exports
 export RUBY_HEAP_MIN_SLOTS=1000
 export RUBY_HEAP_SLOTS_INCREMENT=1
@@ -123,7 +125,7 @@ export J2REDIR=/opt/java/jre
 export PATH=$PATH:/opt/java/jre/bin
 export JAVA_HOME=${JAVA_HOME:-/opt/java/jre}
 
-plugins=(git ruby rails3 rails4 bundler coffe gem git-extras debian github screen fcatena tmux rehash archlinux)
+plugins=(git ruby rails bundler coffe gem git-extras debian github screen fcatena tmux rehash archlinux systemd vagrant rbenv)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -131,9 +133,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
-
-# rbenv initialization
-[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(rbenv init -)" 
 
 # pyenv initialization
 export PYENV_ROOT="$HOME/.pyenv"
