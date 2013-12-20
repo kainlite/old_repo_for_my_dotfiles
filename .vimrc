@@ -1,35 +1,10 @@
 " This is kainlite vimrc
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Let's vundle handle vundle
-Bundle 'gmarik/vundle'
-
-" Repos
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-rbenv'
-Bundle 'tpope/vim-obsession'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-abolish'
-Bundle 'reinh/vim-makegreen'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'honza/vim-snippets'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nelstrom/vim-qargs'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-liquid'
-Bundle 'szw/vim-tags'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'milkypostman/vim-togglelist'
+" Load bundles
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 " Set encoding if available
 if has('multi_byte')
@@ -126,9 +101,9 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
   " Jump to last cursor position unless it's invalid or in an event handler
   autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
@@ -214,15 +189,15 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 " Strip annoying whitespaces
 function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -317,32 +292,32 @@ autocmd FileType eruby let b:surround_35 = "#{\r}"
 
 " Fix arrows for vim
 if &term =~ '^screen' && exists('$TMUX')
-    set mouse+=a
-    " tmux knows the extended mouse mode
-    set ttymouse=xterm2
-    " tmux will send xterm-style keys when xterm-keys is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-    map <Esc>OH <Home>
-    map! <Esc>OH <Home>
-    map <Esc>OF <End>
-    map! <Esc>OF <End>
-    execute "set <Insert>=\e[2;*~"
-    execute "set <Delete>=\e[3;*~"
-    execute "set <PageUp>=\e[5;*~"
-    execute "set <PageDown>=\e[6;*~"
-    execute "set <xF1>=\e[1;*P"
-    execute "set <xF2>=\e[1;*Q"
-    execute "set <xF3>=\e[1;*R"
-    execute "set <xF4>=\e[1;*S"
-    execute "set <F5>=\e[15;*~"
-    execute "set <F6>=\e[17;*~"
-    execute "set <F7>=\e[18;*~"
-    execute "set <F8>=\e[19;*~"
-    execute "set <F9>=\e[20;*~"
-    execute "set <F10>=\e[21;*~"
-    execute "set <F11>=\e[23;*~"
-    execute "set <F12>=\e[24;*~"
+  set mouse+=a
+  " tmux knows the extended mouse mode
+  set ttymouse=xterm2
+  " tmux will send xterm-style keys when xterm-keys is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+  map <Esc>OH <Home>
+  map! <Esc>OH <Home>
+  map <Esc>OF <End>
+  map! <Esc>OF <End>
+  execute "set <Insert>=\e[2;*~"
+  execute "set <Delete>=\e[3;*~"
+  execute "set <PageUp>=\e[5;*~"
+  execute "set <PageDown>=\e[6;*~"
+  execute "set <xF1>=\e[1;*P"
+  execute "set <xF2>=\e[1;*Q"
+  execute "set <xF3>=\e[1;*R"
+  execute "set <xF4>=\e[1;*S"
+  execute "set <F5>=\e[15;*~"
+  execute "set <F6>=\e[17;*~"
+  execute "set <F7>=\e[18;*~"
+  execute "set <F8>=\e[19;*~"
+  execute "set <F9>=\e[20;*~"
+  execute "set <F10>=\e[21;*~"
+  execute "set <F11>=\e[23;*~"
+  execute "set <F12>=\e[24;*~"
 endif

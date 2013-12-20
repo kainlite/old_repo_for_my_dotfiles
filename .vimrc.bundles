@@ -1,0 +1,46 @@
+set nocompatible
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let vundle handle vundle
+Bundle 'gmarik/vundle'
+
+" GH repos
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-rbenv'
+Bundle 'tpope/vim-obsession'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-sleuth'
+Bundle 'reinh/vim-makegreen'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rails'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'honza/vim-snippets'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nelstrom/vim-qargs'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-liquid'
+Bundle 'szw/vim-tags'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'milkypostman/vim-togglelist'
+Bundle 'garbas/vim-snipmate'
+
+" Required for vim-snippets
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'honza/vim-snippets'
+
+filetype on

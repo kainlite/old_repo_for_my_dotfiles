@@ -12,7 +12,6 @@ task :install do
   puts %x{git submodule update}
   puts %x{git submodule foreach git checkout master}
   puts %x{mkdir $HOME/.vim/undodir}
-  puts %x{git clone https://github.com/tpope/vim-fugitive.git $HOME/.dotfiles/.vim/bundle/vim-fugitive}
   puts %x{vim +BundleInstall +qall}
 
   copy_files
