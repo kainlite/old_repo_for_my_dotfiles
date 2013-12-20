@@ -221,13 +221,12 @@ map <leader>c :Rcontroller
 map <leader>m :Rmodel 
 map <leader>s :Rstylesheet 
 map <leader>h :Rhelper 
-map <leader>t :NERDtree<cr>
 map <leader>d :Rmigration 
 map <leader>f :Rfunctionaltest 
 map <leader>e :Rintegrationtest 
 map <leader>u :Runittest 
-map <leader>r :Rake 
-map <leader>t :Rake<cr> 
+map <leader>r :Rake<CR>
+map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>k :Rlocale 
 map <leader>a :A<cr>
 map <leader>z :R<cr>
@@ -268,6 +267,9 @@ imap <buffer> <F7> <Plug>(xmpfilter-run)
 nmap <buffer> <F6> <Plug>(xmpfilter-mark)
 xmap <buffer> <F6> <Plug>(xmpfilter-mark)
 imap <buffer> <F6> <Plug>(xmpfilter-mark)
+
+" Toggler
+nmap <script> <silent> <leader>w :call ToggleQuickfixList()<CR>
 
 " erb mappings 
 " =============

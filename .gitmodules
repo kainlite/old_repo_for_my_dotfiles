@@ -121,3 +121,9 @@
 [submodule ".vim/bundle/vim-ruby-xmpfilter"]
 	path = .vim/bundle/vim-ruby-xmpfilter
 	url = https://github.com/t9md/vim-ruby-xmpfilter.git
+[submodule ".vim/bundle/vim-rspec"]
+	path = .vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec
+[submodule ".vim/bundle/vim-togglelist"]
+	path = .vim/bundle/vim-togglelist
+	url = https://github.com/milkypostman/vim-togglelist.git
