@@ -1,6 +1,6 @@
 [user]
-	name = kainlite
-	email = kainlite@gmail.com
+  name = kainlite
+  email = kainlite@gmail.com
   username = kainlite
 [diff]
 [color]
@@ -28,7 +28,7 @@
   ra = !git r --all
   la = !git l --all
   lg = log --graph
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
 
 [merge]
   tool = vimdiff
@@ -46,4 +46,4 @@
 [push]
   default = simple
 [init]
-    templatedir = ~/.git_template
+  templatedir = ~/.git_template
