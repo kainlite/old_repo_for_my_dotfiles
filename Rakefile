@@ -13,6 +13,7 @@ task :install do
   puts %x{git submodule foreach git checkout master}
   puts %x{mkdir $HOME/.vim/undodir}
   puts %x{git clone https://github.com/tpope/vim-fugitive.git $HOME/.dotfiles/.vim/bundle/vim-fugitive}
+  puts %x{vim +BundleInstall +qall}
 
   copy_files
 end
@@ -29,9 +30,9 @@ task :update do
     puts %x{cd $HOME/#{repository}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repository, '.git'))
   end
 
-  puts %x{curl -Sso ~/.dotfiles/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim}
-
   copy_files
+
+  puts %{vim +BundleInstall +qall}
 end
 
 private

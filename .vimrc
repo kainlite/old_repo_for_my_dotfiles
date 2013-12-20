@@ -1,12 +1,35 @@
 " This is kainlite vimrc
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-" Deprecated
-" call pathogen#runtime_append_all_bundles()
-call pathogen#incubate()
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let's vundle handle vundle
+Bundle 'gmarik/vundle'
+
+" Repos
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-rbenv'
+Bundle 'tpope/vim-obsession'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-abolish'
+Bundle 'garybernhardt/vim-makegreen'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'honza/vim-snippets'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nelstrom/vim-qargs'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-liquid'
+Bundle 'szw/vim-tags'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'milkypostman/vim-togglelist'
 
 " Set encoding if available
 if has('multi_byte')
@@ -74,8 +97,8 @@ set t_ti= t_te=
 set scrolloff=3
 " Store temporary files in a central spot
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim-tmp,~/.tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,/var/tmp,/tmp
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 " display incomplete commands
