@@ -15,7 +15,6 @@ endif
 
 " Set spellcheck
 if has('spell')
-  " set spell
   set spelllang=en_us
   nnoremap _s :set spell!<CR>
 endif
@@ -72,8 +71,8 @@ set t_ti= t_te=
 set scrolloff=3
 " Store temporary files in a central spot
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,/var/tmp,/tmp
+set backupdir=/var/tmp,/tmp
+set directory=/var/tmp,/tmp
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 " display incomplete commands
@@ -110,7 +109,7 @@ augroup vimrcEx
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
 
-  autocmd! BufRead,BufNewFile *.sass setfiletype sass 
+  autocmd! BufRead,BufNewFile *.sass setfiletype sass
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
@@ -158,7 +157,7 @@ function! MapCR()
 endfunction
 
 nnoremap <leader><leader> <c-^>
-nnoremap <leader>. :nohlsearch<cr> 
+nnoremap <leader>. :nohlsearch<cr>
 nnoremap _ts :silent !tmux set status<CR>
 
 " for linux and windows users (using the control key)
@@ -213,26 +212,26 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
 
-map <leader>j :Rjavascript 
-map <leader>v :Rview 
-map <leader>c :Rcontroller 
-map <leader>m :Rmodel 
-map <leader>s :Rstylesheet 
-map <leader>h :Rhelper 
-map <leader>d :Rmigration 
-map <leader>f :Rfunctionaltest 
-map <leader>e :Rintegrationtest 
-map <leader>u :Runittest 
+map <leader>j :Rjavascript
+map <leader>v :Rview
+map <leader>c :Rcontroller
+map <leader>m :Rmodel
+map <leader>s :Rstylesheet
+map <leader>h :Rhelper
+map <leader>d :Rmigration
+map <leader>f :Rfunctionaltest
+map <leader>e :Rintegrationtest
+map <leader>u :Runittest
 map <leader>r :Rake<CR>
 map <leader>t :call RunCurrentSpecFile()<CR>
-map <leader>k :Rlocale 
+map <leader>k :Rlocale
 map <leader>a :A<cr>
 map <leader>z :R<cr>
 
 " set mode paste in insert mode and line number
-set pastetoggle=<C-p> 
+set pastetoggle=<C-p>
 noremap <leader>n :set paste<CR>:put  *<CR>:set nopaste<CR>
-nnoremap <leader>l :set number!<CR>
+nnoremap <leader>b :set number!<CR>
 
 " switch lines upside down and reverse
 nmap <silent> <C-k> [e
@@ -269,7 +268,7 @@ imap <buffer> <F6> <Plug>(xmpfilter-mark)
 " Toggler
 nmap <script> <silent> <leader>w :call ToggleQuickfixList()<CR>
 
-" erb mappings 
+" erb mappings
 " =============
 " Surround.vim
 " =============
@@ -285,7 +284,6 @@ let g:surround_61 = "<%= \r %>"   " =
 map <Leader>y <Plug>Yssurround=<cr>
 map <Leader>i <Plug>Yssurround-<cr>
 map <leader># ysiw#
-" map <leader>y "*y
 
 autocmd FileType ruby let b:surround_35 = "#{\r}"
 autocmd FileType eruby let b:surround_35 = "#{\r}"
@@ -321,3 +319,10 @@ if &term =~ '^screen' && exists('$TMUX')
   execute "set <F11>=\e[23;*~"
   execute "set <F12>=\e[24;*~"
 endif
+
+if has('gui_running')
+  " Make shift-insert work like in Xterm
+  map <S-Insert> <MiddleMouse>
+  map! <S-Insert> <MiddleMouse>
+endif
+
