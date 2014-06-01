@@ -23,7 +23,7 @@ task :update do
   puts %x{git submodule update}
   puts %x{git submodule foreach "git pull origin master"}
 
-  repositories = %w('.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh', '.dotfiles')
+  repositories = %w('.rbenv', '.rbenv/plugins/ruby-build', '.oh-my-zsh', '.dotfiles', '.nvm')
 
   repositories.each do |repository|
     puts %x{cd $HOME/#{repository}; git pull; cd -} if File.directory?(File.join(ENV['HOME'], repository, '.git'))
@@ -42,7 +42,7 @@ def copy_files
   files = %w[
     .vimrc .vimrc.bundles .vim .zshrc .private .irbrc .gitignore .gitmodules .gitconfig .githelpers 
     .gemrc .muttrc .git_template .xmodmap .jrubyrc .bashrc .autotest .tmux.conf
-    .pyenv .rbenv .oh-my-zsh
+    .pyenv .rbenv .oh-my-zsh .nvm
   ]
 
   files.each do |file|

@@ -130,6 +130,9 @@ plugins=(git ruby rails bundler coffe gem git-extras debian github screen fcaten
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+# Nvm
+source ~/.nvm/nvm.sh
+
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
