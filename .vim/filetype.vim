@@ -13,4 +13,3 @@ augroup markdown
     au! BufRead,BufNewFile *.plg  setfiletype prolog
 
 augroup END
-
