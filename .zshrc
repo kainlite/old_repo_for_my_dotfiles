@@ -25,6 +25,7 @@ alias ll='ls -lG'
 alias gadd='git add --all .'
 alias git='LANGUAGE=en_US.UTF-8 git'
 alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
+alias meteors='meteor --settings settings.json'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
