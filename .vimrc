@@ -90,6 +90,7 @@ set wildmode=longest,list
 set wildmenu
 let mapleader=","
 noremap <leader>s :update<CR>
+let g:syntastic_check_on_open=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -285,6 +286,7 @@ let g:surround_61 = "<%= \r %>"   " =
 map <Leader>y <Plug>Yssurround=<cr>
 map <Leader>i <Plug>Yssurround-<cr>
 map <leader># ysiw#
+imap <C-c> <CR><Esc>O
 
 autocmd FileType ruby let b:surround_35 = "#{\r}"
 autocmd FileType eruby let b:surround_35 = "#{\r}"
