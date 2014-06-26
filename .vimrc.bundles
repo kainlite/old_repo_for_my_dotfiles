@@ -45,7 +45,6 @@ Bundle 'walm/jshint.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 
 " Required for vim-snippets

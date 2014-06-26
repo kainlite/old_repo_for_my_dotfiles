@@ -90,7 +90,7 @@ set wildmode=longest,list
 set wildmenu
 let mapleader=","
 noremap <leader>s :update<CR>
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
