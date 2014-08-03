@@ -46,6 +46,9 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
+Bundle 'cmather/vim-meteor-snippets'
+Bundle 'marijnh/tern_for_vim'
+Bundle 'Slava/tern-meteor'
 
 " Required for vim-snippets
 Bundle 'tomtom/tlib_vim'
