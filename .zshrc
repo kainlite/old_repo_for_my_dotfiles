@@ -2,6 +2,7 @@
 ZSH_THEME=gentoo
 ZSH=$HOME/.oh-my-zsh
 DISABLE_CORRECTION="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Configuring history
 unsetopt share_history
@@ -139,6 +140,7 @@ source ~/.nvm/nvm.sh
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
+export PATH="$PATH:$HOME/.WebStorm/bin"
 
 # pyenv initialization
 export PYENV_ROOT="$HOME/.pyenv"
