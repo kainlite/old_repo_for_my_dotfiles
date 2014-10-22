@@ -101,7 +101,7 @@ python_module_dir () {
 #   set -g default-terminal "screen-256color"
 
 # Autostart tmux
-export TERM=screen-256color-bce
+export TERM=screen-256color
 ZSH_TMUX_AUTOSTART="true"
 
 function up()
