@@ -30,7 +30,6 @@ alias meteors='meteor --settings settings.json'
 alias mt='DEBUG=1 JASMINE_DEBUG=1 VELOCITY_DEBUG=1 mrt --settings settings.json'
 alias node='node --harmony'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
 
 # Nicer history
 export HISTSIZE=100000
