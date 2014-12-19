@@ -9,6 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " GH repos
+Bundle 'othree/html5.vim'
+Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-eunuch'
