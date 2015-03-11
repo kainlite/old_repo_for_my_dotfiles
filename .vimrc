@@ -188,7 +188,7 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 " Autocall and key binding
-autocmd BufWritePre *.rb,*.erb,*.py,*.js call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.erb,*.py,*.js,*.html call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 " Strip annoying whitespaces
