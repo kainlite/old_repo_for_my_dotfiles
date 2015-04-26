@@ -332,3 +332,4 @@ if has('gui_running')
   map! <S-Insert> <MiddleMouse>
 endif
 
+let $JS_CMD='node'
