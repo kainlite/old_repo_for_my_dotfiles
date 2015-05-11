@@ -181,6 +181,5 @@ c() { cd ~/Webs/$1; }
 _c() { _files -W ~/Webs -/; }
 compdef _c c
 
-# Workaround for grep_options :\
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
+# Unset annoying stuff
+unalias ss
