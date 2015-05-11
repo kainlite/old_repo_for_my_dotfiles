@@ -1,5 +1,5 @@
 # Set custom prompt
-ZSH_THEME=agnoster
+ZSH_THEME=theme
 ZSH=$HOME/.oh-my-zsh
 DISABLE_CORRECTION="true"
 DISABLE_UPDATE_PROMPT="true"

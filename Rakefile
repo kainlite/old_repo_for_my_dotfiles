@@ -8,13 +8,17 @@ task :install do
   
   puts %x{rm -rf $HOME/.dotfiles/.vim/bundle}
   puts %x{mkdir $HOME/.dotfiles/.vim/bundle}
+  puts %x{git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim}
+  puts %x{vim +BundleInstall +qall}
+  puts %x{cd .vim/bundle; for i in `ls`; do cd ~/.vim/bundle/$i; git submodule add `git remote -v | grep fetch | awk '{ print $2 }'` `basename "$PWD"`; done ; cd ~/.dotfiles }
   puts %x{git submodule init}
   puts %x{git submodule update}
   puts %x{git submodule foreach git checkout master}
   puts %x{mkdir $HOME/.vim/undodir}
-  puts %x{vim +BundleInstall +qall}
   puts %x{git clone https://github.com/powerline/fonts.git}
   puts %x{sh fonts/install.sh}
+  puts %x{rm -rf fonts}
+  puts %x{ln -s ~/.dotfiles/theme.zsh-theme ~/.oh-my-zsh/themes/}
 
   copy_files
 end
