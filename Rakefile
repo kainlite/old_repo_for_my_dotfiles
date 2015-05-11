@@ -13,6 +13,8 @@ task :install do
   puts %x{git submodule foreach git checkout master}
   puts %x{mkdir $HOME/.vim/undodir}
   puts %x{vim +BundleInstall +qall}
+  puts %x{git clone https://github.com/powerline/fonts.git}
+  puts %x{sh fonts/install.sh}
 
   copy_files
 end
