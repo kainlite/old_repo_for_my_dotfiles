@@ -142,9 +142,9 @@ export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/.WebStorm/bin"
 
 # pyenv initialization
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # go path
 export GOPATH=$HOME/Webs/go
