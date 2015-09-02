@@ -43,7 +43,9 @@
   editor = vim
   excludesfile = ~/.gitignore_global
 
-[push]
-  default = simple
 [init]
   templatedir = ~/.git_template
+[gist]
+	username = kainlite
+	token = 2b48fcc3de0c2994dc9cd98900e538cbbf9de38e
+	token = c0053b06341a9c754728ead3290f918ae6524739
