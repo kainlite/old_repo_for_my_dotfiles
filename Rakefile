@@ -18,7 +18,7 @@ task :install do
   puts %x{git clone https://github.com/powerline/fonts.git}
   puts %x{sh fonts/install.sh}
   puts %x{rm -rf fonts}
-  puts %x{ln -s ~/.dotfiles/theme.zsh-theme ~/.oh-my-zsh/themes/}
+  puts %x{cp ~/.dotfiles/theme.zsh-theme ~/.oh-my-zsh/themes/}
 
   copy_files
 end
