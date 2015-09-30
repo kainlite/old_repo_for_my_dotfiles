@@ -106,7 +106,7 @@ augroup vimrcEx
         \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
   autocmd BufNewFile,BufRead *.ejs set filetype=html

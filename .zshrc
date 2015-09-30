@@ -60,45 +60,6 @@ alias f="script/features $*"
 function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
 
-alias papply="puppet apply /home/kainlite/Webs/puppet/manifests/site.pp --modulepath=/home/kainlite/Webs/puppet/modules/ $*"
-
-# Ruby exports
-export RUBY_HEAP_MIN_SLOTS=1000
-export RUBY_HEAP_SLOTS_INCREMENT=1
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.8
-export RUBY_GC_MALLOC_LIMIT=1000000
-export RUBY_HEAP_FREE_MIN=50000
-
-# Activate the closest virtualenv by looking in parent directories.
-activate_virtualenv() {
-    if [ -f env/bin/activate ]; then . env/bin/activate;
-    elif [ -f ../env/bin/activate ]; then . ../env/bin/activate;
-    elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate;
-    elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate;
-    fi
-}
-
-# Find the directory of the named Python module.
-python_module_dir () {
-    echo "$(python -c "import os.path as _, ${1}; \
-        print _.dirname(_.realpath(${1}.__file__[:-1]))"
-        )"
-}
-
-# By @ieure; copied from https://gist.github.com/1474072
-#
-# It finds a file, looking up through parent directories until it finds one.
-# Use it like this:
-#
-#   $ ls .tmux.conf
-#   ls: .tmux.conf: No such file or directory
-#
-#   $ ls `up .tmux.conf`
-#   /Users/grb/.tmux.conf
-#
-#   $ cat `up .tmux.conf`
-#   set -g default-terminal "screen-256color"
-
 # Autostart tmux
 export TERM=screen-256color
 ZSH_TMUX_AUTOSTART="true"
@@ -180,13 +141,3 @@ bindkey '^[[1;5D' backward-word
 c() { cd ~/Webs/$1; }
 _c() { _files -W ~/Webs -/; }
 compdef _c c
-
-# Unset annoying stuff
-unalias ss
-
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/home/kainlite/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables bash completion for gcloud.
-source '/home/kainlite/google-cloud-sdk/completion.zsh.inc'
