@@ -5,7 +5,7 @@
 #
 # # README
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
+SEGMENT_SEPARATOR=''
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -15,7 +15,7 @@ prompt_segment() {
   [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
   if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%}"
   else
     echo -n "%{$bg%}%{$fg%}"
   fi
@@ -26,7 +26,7 @@ prompt_segment() {
 # End the prompt, closing any open segments
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    echo -n "%{%k%F{$CURRENT_BG}%}"
   else
     echo -n "%{%k%}"
   fi
@@ -67,7 +67,7 @@ prompt_git() {
     fi
 
     if [[ $(git status | grep "Your branch is ahead of " | wc -l) -gt 0 ]]; then
-      gstatus=" *"
+      gstatus="* "
     fi
 
     setopt promptsubst
@@ -78,10 +78,11 @@ prompt_git() {
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' stagedstr '✚'
     zstyle ':vcs_info:git:*' unstagedstr '●'
-    zstyle ':vcs_info:*' formats ' %u%c'
-    zstyle ':vcs_info:*' actionformats ' %u%c'
+    zstyle ':vcs_info:*' formats ' %u%c '
+    zstyle ':vcs_info:*' actionformats '%u%c '
     vcs_info
     echo -n "${ref/refs\/heads\// }${vcs_info_msg_0_%% }${mode}${gstatus}"
+   	prompt_segment NONE default " "
   fi
 }
 

@@ -12,6 +12,9 @@ setopt hist_find_no_dups
 setopt hist_reduce_blanks
 setopt hist_no_store
 
+# gnome-terminal wide chars
+export VTE_CJK_WIDTH=wide
+
 # Initialize completion
 autoload -U compinit
 compinit
