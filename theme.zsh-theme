@@ -67,7 +67,7 @@ prompt_git() {
     fi
 
     if [[ $(git status | grep "Your branch is ahead of " | wc -l) -gt 0 ]]; then
-      gstatus="* "
+      gstatus=" *"
     fi
 
     setopt promptsubst
@@ -78,8 +78,8 @@ prompt_git() {
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' stagedstr '✚'
     zstyle ':vcs_info:git:*' unstagedstr '●'
-    zstyle ':vcs_info:*' formats ' %u%c '
-    zstyle ':vcs_info:*' actionformats '%u%c '
+    zstyle ':vcs_info:*' formats ' %u%c'
+    zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info
     echo -n "${ref/refs\/heads\// }${vcs_info_msg_0_%% }${mode}${gstatus}"
    	prompt_segment NONE default " "
