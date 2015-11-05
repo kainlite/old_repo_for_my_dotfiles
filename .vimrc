@@ -229,7 +229,7 @@ map <leader>e :Rintegrationtest
 map <leader>u :Runittest
 map <leader>r :Rake<CR>
 map <leader>t :call RunCurrentSpecFile()<CR>
-map <leader>k :Rlocale
+map <leader>k :k :SetLinuxFormatting<cr><cr>
 map <leader>a :A<cr>
 map <leader>z :R<cr>
 

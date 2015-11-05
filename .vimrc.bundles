@@ -46,6 +46,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'cmather/vim-meteor-snippets'
 Bundle 'Slava/tern-meteor'
+Bundle 'gregkh/kernel-coding-style'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 " Required for vim-snippets
