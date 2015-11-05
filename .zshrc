@@ -24,6 +24,9 @@ unsetopt correct
 zstyle ':completion:*' special-dirs true
 
 # Colorize terminal
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
+# Some aliases
 alias ls='ls -G'
 alias ll='ls -lG'
 alias gadd='git add --all .'
@@ -32,7 +35,7 @@ alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias meteors='meteor --settings settings.json'
 alias mt='DEBUG=1 JASMINE_DEBUG=1 VELOCITY_DEBUG=1 mrt --settings settings.json'
 alias node='node --harmony'
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+alias pacupg='pacaur -Syuad'
 
 # Nicer history
 export HISTSIZE=100000
