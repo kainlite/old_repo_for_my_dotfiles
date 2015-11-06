@@ -42,12 +42,6 @@ account-hook . "unset imap_user; unset imap_pass; unset tunnel"
 # Setup for user1:
 source ~/.mutt/.kainlite
 
-# Setup for user2:
-source ~/.mutt/.libreduca
-
-# Setup for user3:
-source ~/.mutt/.libreunir
-
 # This should be ' »›-‹L' to match Gmail, but $to_chars breaks on unicode.
 set to_chars    = ' +>-<L'
 # Don't move read mail.
@@ -151,9 +145,9 @@ macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Sidebar Navigation ---------------------------------
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
+# bind index,pager <down>   sidebar-next
+# bind index,pager <up>     sidebar-prev
+# bind index,pager <right>  sidebar-open
 
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
@@ -195,3 +189,10 @@ set header_cache    = ~/.mutt/hcache
 set sort            = threads
 # and sort threads by date
 set sort_aux        = last-date-received
+
+set sendmail="/usr/bin/esmtp"
+set envelope_from=yes
+set from="Gabriel Garrido <kainlite@gmail.com>"
+set use_from=yes
+set edit_headers=yes
+
