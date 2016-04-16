@@ -39,7 +39,7 @@ alias node='node --harmony'
 alias pacupgrade='pacaur -Syuad'
 
 # Nicer history
-export HISTSIZE=100000
+export HISTSIZE=10000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
