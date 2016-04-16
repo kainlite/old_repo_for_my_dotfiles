@@ -2,7 +2,7 @@
 ZSH_THEME=theme
 ZSH=$HOME/.oh-my-zsh
 DISABLE_CORRECTION="true"
-DISABLE_UPDATE_PROMPT="true"
+# DISABLE_UPDATE_PROMPT="true"
 
 # Configuring history
 unsetopt share_history
@@ -13,7 +13,7 @@ setopt hist_reduce_blanks
 setopt hist_no_store
 
 # gnome-terminal wide chars
-export VTE_CJK_WIDTH=wide
+# export VTE_CJK_WIDTH=wide
 
 # Initialize completion
 autoload -U compinit
@@ -43,7 +43,7 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
 # Use vim as the editor
-export EDITOR=vi
+export EDITOR=vim
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
 set -o vi
 
@@ -88,7 +88,7 @@ alias zshrc="vim ~/.zshrc"
 ttyctl -f
 
 # Initialize VM
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Java exports
 export J2REDIR=/opt/java/jre
@@ -106,12 +106,6 @@ source ~/.nvm/nvm.sh
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
-export PATH="$PATH:$HOME/.WebStorm/bin"
-
-# pyenv initialization
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
 
 # go path
 export GOPATH=$HOME/Webs/go

@@ -107,6 +107,7 @@ augroup vimrcEx
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
   autocmd BufNewFile,BufRead *.ejs set filetype=html
@@ -229,7 +230,7 @@ map <leader>e :Rintegrationtest
 map <leader>u :Runittest
 map <leader>r :Rake<CR>
 map <leader>t :call RunCurrentSpecFile()<CR>
-map <leader>k :k :SetLinuxFormatting<cr><cr>
+map <leader>k :SetLinuxFormatting<cr><cr>
 map <leader>a :A<cr>
 map <leader>z :R<cr>
 

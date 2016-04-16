@@ -48,6 +48,7 @@ Bundle 'cmather/vim-meteor-snippets'
 Bundle 'Slava/tern-meteor'
 Bundle 'gregkh/kernel-coding-style'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'rust-lang/rust.vim'
 
 " Required for vim-snippets
 Bundle 'tomtom/tlib_vim'

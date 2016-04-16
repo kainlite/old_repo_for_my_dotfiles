@@ -2,6 +2,7 @@
   name = kainlite
   email = kainlite@gmail.com
   username = kainlite
+	signingkey = E5B216BC
 [diff]
 [color]
   ui = auto
