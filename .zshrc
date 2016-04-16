@@ -112,6 +112,9 @@ export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
 export GOPATH=$HOME/Webs/go
 export PATH=$PATH:$GOPATH/bin
 
+# Gpg
+export GNUPGHOME="$HOME/.gnupg"
+
 # copy aliases
 alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
