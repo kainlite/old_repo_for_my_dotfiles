@@ -36,7 +36,7 @@ alias dotfiles_update="cd ~/.dotfiles; rake update; cd -"
 alias meteors='meteor --settings settings.json'
 alias mt='DEBUG=1 JASMINE_DEBUG=1 VELOCITY_DEBUG=1 mrt --settings settings.json'
 alias node='node --harmony'
-alias pacupgrade='pacaur -Syuad'
+alias pacupgrade='pacaur -Syua'
 
 # Nicer history
 export HISTSIZE=10000
