@@ -27,6 +27,7 @@ Bundle 'tpope/vim-sleuth'
 Bundle 'reinh/vim-makegreen'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-projectionist'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
@@ -48,6 +49,10 @@ Bundle 'cmather/vim-meteor-snippets'
 Bundle 'Slava/tern-meteor'
 Bundle 'gregkh/kernel-coding-style'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'avdgaag/vim-phoenix'
+Plugin 'slashmili/alchemist.vim'
+
 Plugin 'rust-lang/rust.vim'
 
 " Required for vim-snippets
