@@ -1,9 +1,11 @@
-" This is kainlite vimrc
 " vim:set ts=2 sts=2 sw=2 expandtab:
+" This is kainlite vimrc
 
 " Load bundles
 if filereadable(expand("~/.vimrc.bundles"))
+  call plug#begin('~/.vim/plugged')
   source ~/.vimrc.bundles
+  call plug#end()
 endif
 
 " Set encoding if available
@@ -91,6 +93,7 @@ set wildmenu
 let mapleader=","
 noremap <leader>s :update<CR>
 let g:syntastic_check_on_open=0
+let g:jsx_ext_required = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -106,7 +109,7 @@ augroup vimrcEx
         \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber,js,jsx set ai sw=2 sts=2 et
   autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
