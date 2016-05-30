@@ -43,8 +43,8 @@ export HISTSIZE=10000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
-# Use vim as the editor
-export EDITOR=vim
+# Use nvim as the editor
+export EDITOR=nvim
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
 set -o vi
 
@@ -61,9 +61,6 @@ export WORDCHARS='*?[]~&;!$%^<>'
 export ACK_COLOR_MATCH='red'
 
 # Aliases
-alias r=rails
-alias t="script/test $*"
-alias f="script/features $*"
 function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
 
@@ -81,10 +78,11 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
-alias vim="stty stop '' -ixoff ; vim"
-alias vims="stty stop '' -ixoff ; vim -S ~/.dotfiles/Session.vim"
-alias vimrc="vim ~/.vimrc"
-alias zshrc="vim ~/.zshrc"
+alias vim="stty stop '' -ixoff ; nvim"
+alias vims="stty stop '' -ixoff ; nvim -S ~/.dotfiles/Session.vim"
+alias vimrc="nvim ~/.vimrc"
+alias zshrc="nvim ~/.zshrc"
+
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 
@@ -96,7 +94,7 @@ export J2REDIR=/opt/java/jre
 export PATH=$PATH:/opt/java/jre/bin
 export JAVA_HOME=${JAVA_HOME:-/opt/java/jre}
 
-plugins=(git ruby rails bundler coffe gem git-extras debian github screen fcatena tmux rehash archlinux systemd vagrant rbenv)
+plugins=(git ruby rails bundler gem git-extras github fcatena tmux rehash archlinux systemd vagrant rbenv elixir)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -108,7 +106,7 @@ source ~/.nvm/nvm.sh
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH:$HOME/Android/sdk/platform-tools"
 
-# go path
+# Go path
 export GOPATH=$HOME/Webs/go
 export PATH=$PATH:$GOPATH/bin
 
@@ -120,7 +118,7 @@ alias ccopy="xclip -sel clip"
 alias cpaste="xclip -sel clip -o"
 alias s="screen"
 alias sr="screen -r"
-alias hugs="hugs -98 -E'vim'"
+alias hugs="hugs -98 -E'nvim'"
 
 # Restore the last backgrounded task with Ctrl-V
 function foreground_task() { 

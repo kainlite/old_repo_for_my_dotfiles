@@ -51,6 +51,7 @@ set nobomb
 
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
+
 " highlight current line
 set cursorline
 set cmdheight=1
@@ -113,16 +114,18 @@ augroup vimrcEx
   autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
-  autocmd BufNewFile,BufRead *.ejs set filetype=html
 
+  autocmd BufNewFile,BufRead *.ejs set filetype=html
+  autocmd BufNewFile,BufRead *.jsx set filetype=html
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
   
   autocmd BufNewFile,BufRead *.prawn setf ruby
+  
   " Indent p tags
-  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
@@ -154,7 +157,7 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-"
+
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 imap <c-c> <esc>
 
@@ -206,31 +209,10 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PROMOTE VARIABLE TO RSPEC LET
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! PromoteToLet()
-  :normal! dd
-  " :exec '?^\s*it\>'
-  :normal! P
-  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  :normal ==
-endfunction
-:command! PromoteToLet :call PromoteToLet()
-:map <leader>p :PromoteToLet<cr>
-
-map <leader>j :Rjavascript
-map <leader>v :Rview
-map <leader>c :Rcontroller
-map <leader>m :Rmodel
-map <leader>s :Rstylesheet
-map <leader>h :Rhelper
-map <leader>d :Rmigration
-map <leader>f :Rfunctionaltest
-map <leader>e :Rintegrationtest
-map <leader>u :Runittest
-map <leader>r :Rake<CR>
-map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>j :Ejavascript
+map <leader>v :Eview
+map <leader>c :Econtroller
+map <leader>m :Emodel
 map <leader>k :SetLinuxFormatting<cr><cr>
 map <leader>a :A<cr>
 map <leader>z :R<cr>
@@ -261,16 +243,6 @@ nnoremap <Leader>gp :Git push<CR>
 " Invisibles characters setup
 nmap <Leader>L :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
-
-" Inline execution
-" Depends on gems: rcodetools and fastri
-nmap <buffer> <F7> <Plug>(xmpfilter-run)
-xmap <buffer> <F7> <Plug>(xmpfilter-run)
-imap <buffer> <F7> <Plug>(xmpfilter-run)
-
-nmap <buffer> <F6> <Plug>(xmpfilter-mark)
-xmap <buffer> <F6> <Plug>(xmpfilter-mark)
-imap <buffer> <F6> <Plug>(xmpfilter-mark)
 
 " Toggler
 nmap <script> <silent> <leader>w :call ToggleQuickfixList()<CR>
