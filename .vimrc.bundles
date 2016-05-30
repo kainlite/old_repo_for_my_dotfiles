@@ -21,7 +21,10 @@ Plug 'tpope/vim-sleuth'
 Plug 'reinh/vim-makegreen'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
+
+Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
+
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-ruby/vim-ruby'
 Plug 'kchmck/vim-coffee-script'
@@ -43,7 +46,6 @@ Plug 'Slava/tern-meteor'
 Plug 'gregkh/kernel-coding-style'
 Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'elixir-lang/vim-elixir'
-Plug 'c-brenn/phoenix.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
