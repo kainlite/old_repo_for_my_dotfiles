@@ -209,10 +209,10 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-map <leader>j :Ejavascript
-map <leader>v :Eview
-map <leader>c :Econtroller
-map <leader>m :Emodel
+map <leader>j :Tjavascript
+map <leader>v :Tview
+map <leader>c :Tcontroller
+map <leader>m :Tmodel
 map <leader>k :SetLinuxFormatting<cr><cr>
 map <leader>a :A<cr>
 map <leader>z :R<cr>
