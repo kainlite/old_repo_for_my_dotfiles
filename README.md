@@ -21,3 +21,7 @@ BTW: Thank you Gary, you've done an amazing job with this set of configurations.
 
 If you don't like it, don't use it ;)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kainlite/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
