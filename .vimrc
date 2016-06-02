@@ -111,7 +111,7 @@ augroup vimrcEx
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber,js,jsx,ex,eex set ai sw=2 sts=2 et
-  autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+  autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 expandtab
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
 
@@ -129,6 +129,9 @@ augroup vimrcEx
 
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
+
+  " For everything else use this default to prevent the tab _casqueada_
+  autocmd Filetype * set sw=2 sts=2  ts=2 expandtab
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
