@@ -56,7 +56,7 @@ set ignorecase smartcase
 set cursorline
 set cmdheight=1
 set switchbuf=useopen
-set numberwidth=4
+set numberwidth=2
 set showtabline=2
 set winwidth=79
 set ttimeoutlen=50
@@ -110,7 +110,7 @@ augroup vimrcEx
         \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber,js,jsx set ai sw=2 sts=2 et
+  autocmd FileType rb,ruby,haml,eruby,yaml,html,tmpl,javascript,sass,cucumber,js,jsx,ex,eex set ai sw=2 sts=2 et
   autocmd FileType c,cpp set ai tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
   autocmd FileType python set sw=4 sts=4 et
   autocmd Filetype prolog set syntax=prolog
@@ -193,7 +193,7 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 " Autocall and key binding
-autocmd BufWritePre *.rb,*.erb,*.py,*.js,*.html call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.erb,*.py,*.js,*.html,*.txt,*.csv,*.tsv,*.jsx,*.ex,*.eex call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 " Strip annoying whitespaces
